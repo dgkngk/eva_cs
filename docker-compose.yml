@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: mypg
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: myPaszw0rd
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres_user
+      DB_PASSWORD: myPaszw0rd
+      DB_NAME: mypg

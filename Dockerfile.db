@@ -1,0 +1,7 @@
+FROM postgres:13
+
+ENV POSTGRES_DB=mypg
+ENV POSTGRES_USER=postgres_user
+ENV POSTGRES_PASSWORD=myPaszw0rd
+
+EXPOSE 5432

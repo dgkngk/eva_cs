@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "7a43553b-55c3-441b-9f1c-f7508334ebb8",
+		"name": "Trading API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20389230"
+	},
+	"item": [
+		{
+			"name": "Get All Shares",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "cccd6799-ffbf-443a-a94a-99bf94a4957e"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/shares",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shares"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Share by Symbol",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "4cd0b9b9-6502-4635-872d-b4c9d7330198"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/shares/:symbol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shares",
+						":symbol"
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "AAP",
+							"uuid": "98a0e11b-3ea1-40e3-9abd-73fd2d2a9631"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Share",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "51902cce-1e36-4c90-a494-ad7c773dfbd6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"AAP\",\n    \"price\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shares",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shares"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Share",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "b30e103d-7991-48da-87c0-c45c766f47f7"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/shares/:symbol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shares",
+						":symbol"
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "AAP",
+							"uuid": "bc4125bc-3d16-4ae9-88bf-f2f3820651da"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Share",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "a5d4b72d-50f7-494a-9c91-051262efaf1f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 110\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shares/:symbol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shares",
+						":symbol"
+					],
+					"variable": [
+						{
+							"key": "symbol",
+							"value": "AAP",
+							"uuid": "ffa2c042-23d0-41c0-af19-3abb60822281"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Portfolios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "faa81e95-505e-4a3d-8411-5f14b5a910a3"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/portfolios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Portfolio by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "a8181cc8-bd18-492f-9929-c1574f202b25"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/portfolios/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolios",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1",
+							"uuid": "b401e65a-ec5d-4c15-9d87-e3d03eb76d96"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Portfolio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "abf8015b-f488-4bbf-b51d-09946115aeaf"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/portfolios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Trades",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "beeda2b1-3f14-48b8-a2ff-a73b0d4be972"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/trades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Shares",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "18348af5-6df4-4e2c-b934-cca2cf587542"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shareId\": \"AAP\",\n    \"amount\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/trades/:portfolioId/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trades",
+						":portfolioId",
+						"buy"
+					],
+					"variable": [
+						{
+							"key": "portfolioId",
+							"value": "1",
+							"uuid": "61f7a809-03f1-4a47-856f-5cca8a52e900"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Shares",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "c4b0838c-be37-4000-918c-06019879e847"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shareId\": \"AAP\",\n    \"amount\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/trades/:portfolioId/sell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trades",
+						":portfolioId",
+						"sell"
+					],
+					"variable": [
+						{
+							"key": "portfolioId",
+							"value": "1",
+							"uuid": "0709d5bc-f1f9-45d9-9336-e824e6e50963"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shares of Portfolio",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
