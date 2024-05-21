@@ -4,9 +4,10 @@
 
 ## Installation
 
-Pull the repository and run the following command. Make sure docker and docker-compose are installed.
+Pull the repository and run the following commands. Make sure npm, docker and docker-compose are installed.
 
 ```
+npm install
 docker-compose up --build
 ```
 
